@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  /* background-image: url(../images/background.jpg); */
+  /* background-color:#e0d3c6; */
+  background-color: #DECECE;
+  /* background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 20px;
+  font-size: 40px;
+}
+
+.card-input {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 20px;
+}
+
+#inputText {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: transparent;
+  border-bottom: 2px solid #71778e;
+}
+
+#inputText:focus {
+  border-bottom: 2px solid #dacb58;
+}
+
+.addBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0px 0px 5px #000;
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+}
+
+i {
+  color: #71778e;
+}
+
+.addBtn:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  background: #71778e;
+}
+
+.addBtn:hover i {
+  color: #fff;
+}
+
+.addBtn:active {
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tips {
+  font-family: Comic Sans MS;
+  padding: 5px;
+}
+
+.tip {
+  color: #cc001b;
+}
+
+.card_list {
+  background: rgba(35, 28, 26, 0.7);
+  margin: 20px;
+}
+
+.tab {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.tab li {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bolder;
+  background: #d1beba;
+}
+
+.list {
+  padding: 10px;
+}
+
+.list li {
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.footer {
+  text-align: left;
+  padding: 10px 30px;
+}
+
+.list li {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list .delete {
+  width: 20px;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+#delete {
+  cursor: pointer;
+  color: #fff;
+}
+
+#delete:hover {
+  transform: scale(1.2);
+  color: #deb317;
+}
+
+#delete:active {
+  transform: scale(1);
+}
+
+.list label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.list label:hover {
+  color: #e7bc23;
+}
+
+.list input[type="checkbox"] {
+  position: relative;
+  margin-right: 10px;
+  -webkit-appearance: none; /*取消預設外觀*/
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* 設定被選取後的樣子 */
+.list input[type="checkbox"]:checked {
+  border: none;
+  background: transparent;
+}
+
+.list input[type="checkbox"]:checked + span {
+  /*   color: #fff; */
+  text-decoration: line-through 2px solid;
+}
+
+.list input[type="checkbox"]:checked:after {
+  content: " ✓";
+  position: absolute;
+  font-size: 16px;
+  font-weight: bolder;
+  padding-left: 3px;
+  line-height: 20px;
+  color: #e7bc23;
+}
+
+.list input[type="checkbox"]:checked:after + sapn {
+  color: red;
+  text-decoration: line-through 3px solid #555;
+}
+
+.list i {
+  font-size: 20px;
+}
+
+.list_footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 20px 30px;
+}
+
+#deleteBTN {
+  cursor: pointer;
+  background: rgba(113, 119, 142, 0.5);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
+
+#deleteBTN:hover {
+  background: rgba(113, 119, 142, 0.7);
+}

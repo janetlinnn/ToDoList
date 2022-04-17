@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO LIST</title>
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/4fe8e2c77b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>TO DO LIST</h1>
+    <div class="card-input">
+      <input type="text" id="inputText" placeholder="What needs to be done?">
+      <button id="addBTN" class="addBtn" type="submit"><i class="fa fa-plus" style="font-size:24px"></button></i>
+    </div>
+    <p class="tips">Make each day your masterpiece!</p>
+  
+    <div class="card card_list">
+      <ul  class="tab" id="tab">
+        <li class="active" data-tab="all">All</li>
+        <li data-tab="work">Active</li>
+        <li data-tab="done">Completed</li>
+      </ul>
+      <ul id="todoList" class="list">
+        <!--       <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            <span>JS學習</span>
+          </label>
+          <i id="delete" class="fa fa-trash"></i>
+        </li> -->
+      </ul>
+    </div>
+    <div class="list_footer">
+      <p class="itemsLeft"> <span id="workNum"> 0 </span> items left</p>
+      <button id="deleteBTN">Clear Completed</button>
+    </div>
+  </div>
+
+
+
+  <script src="./js/all.js"></script>
+</body>
+
+</html>
